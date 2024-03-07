@@ -1,6 +1,6 @@
 import logo from "/src/assets/images/logo.svg";
 import styles from "./Header.module.css";
-import "../../css/App.css";
+import "/src/css/App.css";
 
 function Header() {
   return (
@@ -11,7 +11,7 @@ function Header() {
             <img src={logo} alt="Manage" />
           </a>
           <nav className={styles["primary-navigation"]}>
-            <ul role="list" className={styles["nav-list"]}>
+            <ul aria-label="Primary" role="list" className={styles["nav-list"]}>
               <li>
                 <a href="#">Pricing</a>
               </li>
