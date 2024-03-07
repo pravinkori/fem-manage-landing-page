@@ -1,14 +1,15 @@
-import './css/App.css'
-
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import "./css/App.css";
 function App() {
-
   return (
     <>
+      <Header />
       <main>
-        <h1>this is first commit</h1>
+        <Hero />
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
