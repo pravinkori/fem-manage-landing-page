@@ -1,6 +1,6 @@
 import heroIllustration from "/src/assets/images/illustration-intro.svg";
 import styles from "./Hero.module.css";
-import "../../css/App.css";
+import "/src/css/App.css";
 
 function Hero() {
   return (
