@@ -1,9 +1,10 @@
 import styles from "./CTA.module.css";
-import "/src/css/App.css";
 
 function CTA() {
   return (
-    <section className={`cta | bg-accent-400 text-neutral-100`}>
+    <section
+      className={`cta | ff-accent bg-accent-400 text-neutral-100 padding-block-700`}
+    >
       <div className={`container`}>
         <div className={`even-columns`}>
           <div>

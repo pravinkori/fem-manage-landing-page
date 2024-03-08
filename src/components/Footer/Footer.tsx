@@ -1,10 +1,9 @@
 import logo from "/src/assets/images/logo.svg";
-import "/src/css/App.css";
 import styles from "./Footer.module.css";
 
 function Footer() {
   return (
-    <section className={`bg-neutral-900 text-neutral-100`}>
+    <section className={`bg-neutral-900 text-neutral-100 padding-block-700`}>
       <div className={`container`}>
         <div className={`even-columns`}>
           <div>
