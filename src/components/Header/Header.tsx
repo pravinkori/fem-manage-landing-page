@@ -29,7 +29,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <button className={styles["button"]}>Get Started</button>
+          <button className={`button`}>Get Started</button>
         </div>
       </header>
     </>

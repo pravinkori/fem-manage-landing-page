@@ -1,4 +1,4 @@
-import styles from "./CTA.module.css";
+// import styles from "./CTA.module.css";
 
 function CTA() {
   return (
@@ -13,7 +13,7 @@ function CTA() {
             </p>
           </div>
           <div>
-            <button className={styles.button} datatype="inverted">
+            <button className={`button`} data-type="inverted">
               Get Started
             </button>
           </div>
