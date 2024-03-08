@@ -4,9 +4,9 @@ import styles from "./Footer.module.css";
 
 function Footer() {
   return (
-    <section className={`bg-neutral-900 text-accent-100`}>
-      <div className={styles.container}>
-        <div className="even-columns">
+    <section className={`bg-neutral-900 text-neutral-100`}>
+      <div className={`container`}>
+        <div className={`even-columns`}>
           <div>
             <img src={logo} alt="Manage" />
             <ul role="list" aria-label="Social links">

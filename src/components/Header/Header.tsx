@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <header className={styles["primary-header"]}>
-        <div className={styles["container"]}>
+        <div className={`container`}>
           <a href="#">
             <img src={logo} alt="Manage" />
           </a>
