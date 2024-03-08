@@ -56,7 +56,7 @@ function Footer() {
           <div>
             <form action="">
               <input type="text" />
-              <button className={styles.button}>Go</button>
+              <button className={`button`}>Go</button>
             </form>
             <p>Copyright 2024. All Rights Reserved</p>
           </div>

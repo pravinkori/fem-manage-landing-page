@@ -15,7 +15,7 @@ function Hero() {
               Manage makes it simple for software teams to plan day-to-day tasks
               while keeping the larger team goals in view.
             </p>
-            <button className={styles.button}>Get Started</button>
+            <button className={`button`}>Get Started</button>
           </div>
           <div>
             <img src={heroIllustration} alt="" />

@@ -7,7 +7,7 @@ function Carousel() {
         What they've said
       </h2>
       {/* Carousel here */}
-      <button className={styles.button}>Get Started</button>
+      <button className={`button`}>Get Started</button>
     </section>
   );
 }
