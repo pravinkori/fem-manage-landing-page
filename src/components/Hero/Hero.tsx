@@ -5,8 +5,8 @@ import "/src/css/App.css";
 function Hero() {
   return (
     <section>
-      <div className={styles.container}>
-        <div className={styles["even-columns"]}>
+      <div className={`container`}>
+        <div className={`even-columns`}>
           <div>
             <h1 className={`${styles} fs-primary-heading fw-bold `}>
               Bring everyone together to build better products

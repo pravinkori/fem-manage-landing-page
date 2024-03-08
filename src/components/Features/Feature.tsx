@@ -4,8 +4,8 @@ import "/src/css/App.css";
 function Feature() {
   return (
     <section>
-      <div className={styles.container}>
-        <div className={styles["even-columns"]}>
+      <div className={`container`}>
+        <div className={`even-columns`}>
           <div>
             <h2 className={`fs-secondary-heading fw-bold`}>
               What's different about Manage?
