@@ -6,8 +6,8 @@
 
   --clr-primary-400: hsl(228, 39%, 23%);
 
-  --clr-neutral-100: hsl(232, 12%, 13%);
-  --clr-neutral-900: hsl(0, 0%, 0%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-900: hsl(232, 12%, 13%);
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
   --ff-secondary: "Nunito", sans-serif;
@@ -41,4 +41,11 @@
     --fs-primary-heading: var(--fs-900);
     --fs-secondary-heading: var(--fs-800);
   }
+}
+
+/* general styling */
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-primary-400);
 }
