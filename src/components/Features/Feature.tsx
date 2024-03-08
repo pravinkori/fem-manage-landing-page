@@ -1,13 +1,12 @@
 import styles from "./Feature.module.css";
-import "/src/css/App.css";
 
 function Feature() {
   return (
-    <section>
+    <section className={`padding-block-700`}>
       <div className={`container`}>
         <div className={`even-columns`}>
           <div>
-            <h2 className={`fs-secondary-heading fw-bold`}>
+            <h2 className={`ff-accent fs-secondary-heading fw-bold`}>
               What's different about Manage?
             </h2>
             <p>
