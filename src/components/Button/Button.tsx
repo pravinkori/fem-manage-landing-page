@@ -1,35 +1,19 @@
 import { ReactNode } from "react";
+import styles from "./Button.module.css";
 
 interface ButtonProps {
   children: ReactNode;
-  inverted?: boolean;
+  type?: string;
 }
 
-function Button({ children, inverted }: ButtonProps) {
-  let themeColor;
-  let buttonClass = "button";
-
-  if (inverted) {
-    buttonClass += "inverted";
-  }
+function Button({ children, type }: ButtonProps) {
+  const buttonClasses = `${styles.button}${
+    type === "inverted" ? ` ${styles.inverted}` : ""
+  }`;
 
   return (
     <>
-      <button
-        className={buttonClass}
-        style={{
-          cursor: "pointer",
-          border: 0,
-          borderRadius: "100vmax",
-          padding: "1.25em 2.5em",
-          fontWeight: "var(--fw-bold)",
-          fontSize: "var(--fs-button)",
-          lineHeight: 1,
-          color: inverted ? themeColor : "var(--clr-neutral-100)",
-          backgroundColor: inverted ? "var(--clr-neutral-100)" : themeColor,
-          boxShadow: "0 1.125em 1em -1em " + themeColor,
-        }}
-      >
+      <button className={buttonClasses} data-type={type}>
         {children}
       </button>
     </>
