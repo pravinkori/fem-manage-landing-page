@@ -1,6 +1,7 @@
 import logo from "/src/assets/images/logo.svg";
 import styles from "./Header.module.css";
 import "/src/css/App.css";
+import Button from "../Button/Button";
 
 function Header() {
   return (
@@ -29,7 +30,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <button className={`button`}>Get Started</button>
+          <Button>Get Started</Button>
         </div>
       </header>
     </>

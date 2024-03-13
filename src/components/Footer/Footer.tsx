@@ -1,5 +1,6 @@
 import logo from "/src/assets/images/logo.svg";
 import styles from "./Footer.module.css";
+import Button from "../Button/Button";
 
 function Footer() {
   return (
@@ -56,7 +57,7 @@ function Footer() {
           <div>
             <form action="">
               <input type="text" />
-              <button className={`button`}>Go</button>
+              <Button>Go</Button>
             </form>
             <p>Copyright 2024. All Rights Reserved</p>
           </div>
