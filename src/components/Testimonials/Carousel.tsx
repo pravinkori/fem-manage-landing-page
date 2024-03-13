@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import styles from "./Carousel.module.css";
 
 function Carousel() {
@@ -7,7 +8,7 @@ function Carousel() {
         What they've said
       </h2>
       {/* Carousel here */}
-      <button className={`button`}>Get Started</button>
+      <Button>Get Started</Button>
     </section>
   );
 }

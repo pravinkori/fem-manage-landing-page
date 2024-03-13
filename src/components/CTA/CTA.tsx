@@ -1,5 +1,7 @@
 // import styles from "./CTA.module.css";
 
+import Button from "../Button/Button";
+
 function CTA() {
   return (
     <section
@@ -13,9 +15,7 @@ function CTA() {
             </p>
           </div>
           <div>
-            <button className={`button`} data-type="inverted">
-              Get Started
-            </button>
+            <Button type="inverted">Get Started</Button>
           </div>
         </div>
       </div>

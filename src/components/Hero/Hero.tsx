@@ -1,5 +1,6 @@
 import heroIllustration from "/src/assets/images/illustration-intro.svg";
 import styles from "./Hero.module.css";
+import Button from "../Button/Button";
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
               Manage makes it simple for software teams to plan day-to-day tasks
               while keeping the larger team goals in view.
             </p>
-            <button className={`button`}>Get Started</button>
+            <Button>Get Started</Button>
           </div>
           <div>
             <img src={heroIllustration} alt="" />
