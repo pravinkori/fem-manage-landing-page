@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import logo from "/src/assets/images/logo.svg";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
@@ -94,7 +94,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <span style={{ display: "none" }}>
+          <span className={`display-sm-none display-md-inline-flex`}>
             <Button>Get Started</Button>
           </span>
         </div>
