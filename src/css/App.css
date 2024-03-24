@@ -61,3 +61,11 @@ body {
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
 }
+
+p:not([class]) {
+  max-width: 42ch;
+}
+
+p [data-width="wide"] {
+  max-width: 45ch;
+}
