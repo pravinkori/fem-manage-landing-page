@@ -7,8 +7,8 @@ function Hero() {
     <section className={`padding-block-700`}>
       <div className={`container`}>
         <div className={`even-columns`}>
-          <div>
-            <h1 className={`${styles} ff-accent fs-primary-heading fw-bold `}>
+          <div className={`flow`}>
+            <h1 className={`${styles} ff-accent fs-primary-heading fw-bold`}>
               Bring everyone together to build better products
             </h1>
             <p>
