@@ -1,3 +1,20 @@
+.cta {
+  position: relative;
+  isolation: isolate;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("/src/assets/images/bg-tablet-pattern.svg"),
+    url("/src/assets/images/bg-tablet-pattern.svg");
+  background-position: -15rem -5rem, 90rem -40rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
 .justify-self-end {
   justify-self: end;
 }
