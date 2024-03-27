@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 function CTA() {
   return (
     <section
-      className={`cta | ff-accent bg-accent-400 text-neutral-100 padding-block-700`}
+      className={`${styles.cta} | ff-accent bg-accent-400 text-neutral-100 padding-block-700`}
     >
       <div className={`container`}>
         <div className={`even-columns ${styles["vertical-align-center"]}`}>
