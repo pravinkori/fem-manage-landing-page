@@ -10,11 +10,11 @@ function CTA() {
       <div className={`container`}>
         <div className={`even-columns ${styles["vertical-align-center"]}`}>
           <div>
-            <p className={`fs-secondary-heading fw-bold`}>
+            <p className={`fs-primary-heading fw-bold`}>
               Simplify how your team works today.
             </p>
           </div>
-          <div className={`${styles["justify-self-end"]}`}>
+          <div className={`${styles["justify-self-end-md"]}`}>
             <Button type="inverted">Get Started</Button>
           </div>
         </div>

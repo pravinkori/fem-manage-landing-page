@@ -1,6 +1,13 @@
 .cta {
   position: relative;
   isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50rem) {
+  .cta {
+    text-align: left;
+  }
 }
 
 .cta::before {
@@ -15,10 +22,16 @@
   opacity: 0.1;
 }
 
+.vertical-align-center {
+  align-items: center;
+}
+
 .justify-self-end {
   justify-self: end;
 }
 
-.vertical-align-center {
-  align-items: center;
+@media (min-width: 50rem) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
 }
