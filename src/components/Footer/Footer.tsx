@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 function Footer() {
   return (
-    <section className={`bg-neutral-900 text-neutral-100 padding-block-700`}>
+    <section className={`bg-neutral-900 text-neutral-100  padding-block-800`}>
       <div className={`container`}>
         <div className={`even-columns`}>
           <div>
@@ -31,7 +31,7 @@ function Footer() {
             <nav className={styles["footer-nav"]}>
               <ul aria-label="Footer" role="list">
                 <li>
-                  <a href="#">Homoe</a>
+                  <a href="#">Home</a>
                 </li>
                 <li>
                   <a href="#">Pricing</a>
