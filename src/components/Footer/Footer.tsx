@@ -5,11 +5,17 @@ import socialIcons from "/src/assets/images/social-icons.svg";
 
 function Footer() {
   return (
-    <section className={`bg-neutral-900 text-neutral-100  padding-block-800`}>
+    <section
+      className={`${styles["primary-footer"]} | bg-neutral-900 text-neutral-100  padding-block-800`}
+    >
       <div className={`container`}>
         <div className={`even-columns`}>
           <div>
-            <img src={logo} alt="Manage" />
+            <a href="#">
+              <svg className="logo" width={146} height={24}>
+                <use xlinkHref={`${logo}#logo`}></use>
+              </svg>
+            </a>
             <ul
               className={`${styles["social-list"]}`}
               role="list"

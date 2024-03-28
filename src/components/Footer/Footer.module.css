@@ -1,3 +1,7 @@
+.primary-footer {
+  --logo-color: var(--clr-neutral-100);
+}
+
 .footer-nav {
   columns: 2;
 }
