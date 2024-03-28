@@ -121,6 +121,10 @@
   padding-block: var(--size-700);
 }
 
+.padding-block-800 {
+  padding-block: var(--size-800);
+}
+
 .display-sm-none {
   display: none;
 }
