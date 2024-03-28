@@ -44,7 +44,9 @@ function Header() {
       <div className={`container`}>
         <div className={styles["nav-wrapper"]}>
           <a href="#">
-            <img src={logo} alt="Manage" />
+            <svg className="logo" width={146} height={24}>
+              <use xlinkHref={`${logo}#logo`}></use>
+            </svg>
           </a>
           <button
             ref={navToggleRef}
