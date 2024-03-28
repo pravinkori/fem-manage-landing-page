@@ -1,6 +1,7 @@
 import logo from "/src/assets/images/logo.svg";
 import styles from "./Footer.module.css";
 import Button from "../Button/Button";
+import socialIcons from "/src/assets/images/social-icons.svg";
 
 function Footer() {
   return (
@@ -9,21 +10,45 @@ function Footer() {
         <div className={`even-columns`}>
           <div>
             <img src={logo} alt="Manage" />
-            <ul role="list" aria-label="Social links">
+            <ul
+              className={`${styles["social-list"]}`}
+              role="list"
+              aria-label="Social links"
+            >
               <li>
-                <a aria-label="facebook" href="#"></a>
+                <a aria-label="facebook" href="#">
+                  <svg className={styles["social-icon"]}>
+                    <use xlinkHref={`${socialIcons}#icon-facebook`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="youtube" href="#"></a>
+                <a aria-label="youtube" href="#">
+                  <svg className={styles["social-icon"]}>
+                    <use xlinkHref={`${socialIcons}#icon-youtube`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="twitter" href="#"></a>
+                <a aria-label="twitter" href="#">
+                  <svg className={styles["social-icon"]}>
+                    <use xlinkHref={`${socialIcons}#icon-twitter`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="pinterest" href="#"></a>
+                <a aria-label="pinterest" href="#">
+                  <svg className={styles["social-icon"]}>
+                    <use xlinkHref={`${socialIcons}#icon-pinterest`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="instagram" href="#"></a>
+                <a aria-label="instagram" href="#">
+                  <svg className={styles["social-icon"]}>
+                    <use xlinkHref={`${socialIcons}#icon-instagram`}></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
