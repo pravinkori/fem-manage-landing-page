@@ -21,6 +21,7 @@
 
 .flow > * + * {
   margin-top: var(--flow-spacer, 3em);
+  margin-bottom: var(--flow-spacer, 3em);
 }
 
 /* :where(.flow > :not(:first-child)) {
