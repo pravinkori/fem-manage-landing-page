@@ -11,7 +11,7 @@ const headerNavigationList = [
     href: "#",
   },
   {
-    text: "About us",
+    text: "Product",
     href: "#",
   },
   {

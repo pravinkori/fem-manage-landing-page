@@ -3,6 +3,37 @@ import styles from "./Footer.module.css";
 import Button from "../Button/Button";
 import socialIcons from "/src/assets/images/social-icons.svg";
 
+const footerNavigationList = [
+  {
+    text: "Home",
+    href: "#",
+  },
+  {
+    text: "Pricing",
+    href: "#",
+  },
+  {
+    text: "Products",
+    href: "#",
+  },
+  {
+    text: "About us",
+    href: "#",
+  },
+  {
+    text: "Careers",
+    href: "#",
+  },
+  {
+    text: "Community",
+    href: "#",
+  },
+  {
+    text: "Privacy Policy",
+    href: "#",
+  },
+];
+
 function Footer() {
   return (
     <section
@@ -16,6 +47,8 @@ function Footer() {
                 <use xlinkHref={`${logo}#logo`}></use>
               </svg>
             </a>
+
+            {/* Social links */}
             <ul
               className={`${styles["social-list"]}`}
               role="list"
@@ -58,30 +91,15 @@ function Footer() {
               </li>
             </ul>
           </div>
+          {/* footer navigation links */}
           <div>
             <nav className={styles["footer-nav"]}>
               <ul aria-label="Footer" role="list">
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Pricing</a>
-                </li>
-                <li>
-                  <a href="#">Products</a>
-                </li>
-                <li>
-                  <a href="#">About Us</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
-                <li>
-                  <a href="#">Community</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
+                {footerNavigationList.map((link) => (
+                  <li key={link.text}>
+                    <a href={link.href}>{link.text}</a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
