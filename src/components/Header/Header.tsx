@@ -5,6 +5,25 @@ import Button from "../Button/Button";
 import closeIcon from "/src/assets/images/icon-close.svg";
 import hamburgerIcon from "/src/assets/images/icon-hamburger.svg";
 
+const headerNavigationList = [
+  {
+    text: "Pricing",
+    href: "#",
+  },
+  {
+    text: "About us",
+    href: "#",
+  },
+  {
+    text: "About us",
+    href: "#",
+  },
+  {
+    text: "Community",
+    href: "#",
+  },
+];
+
 function Header() {
   const primaryNavRef = useRef<HTMLElement>(null);
   const navToggleRef = useRef<HTMLButtonElement>(null);
@@ -79,21 +98,11 @@ function Header() {
               className={styles["nav-list"]}
               id="primary-navigation"
             >
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-              <li>
-                <a href="#">Product</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-              <li>
-                <a href="#">Community</a>
-              </li>
+              {headerNavigationList.map((link) => (
+                <li key={link.text}>
+                  <a href={link.href}>{link.text}</a>
+                </li>
+              ))}
             </ul>
           </nav>
           <span className={`display-sm-none display-md-inline-flex`}>
