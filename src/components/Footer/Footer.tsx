@@ -34,6 +34,14 @@ const footerNavigationList = [
   },
 ];
 
+const socialMediaLinks = [
+  { platform: "facebook", iconId: "icon-facebook", href: "#" },
+  { platform: "youtube", iconId: "icon-youtube", href: "#" },
+  { platform: "twitter", iconId: "icon-twitter", href: "#" },
+  { platform: "pinterest", iconId: "icon-pinterest", href: "#" },
+  { platform: "instagram", iconId: "icon-instagram", href: "#" },
+];
+
 function Footer() {
   return (
     <section
@@ -54,41 +62,15 @@ function Footer() {
               role="list"
               aria-label="Social links"
             >
-              <li>
-                <a aria-label="facebook" href="#">
-                  <svg className={styles["social-icon"]}>
-                    <use xlinkHref={`${socialIcons}#icon-facebook`}></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="youtube" href="#">
-                  <svg className={styles["social-icon"]}>
-                    <use xlinkHref={`${socialIcons}#icon-youtube`}></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="twitter" href="#">
-                  <svg className={styles["social-icon"]}>
-                    <use xlinkHref={`${socialIcons}#icon-twitter`}></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="pinterest" href="#">
-                  <svg className={styles["social-icon"]}>
-                    <use xlinkHref={`${socialIcons}#icon-pinterest`}></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="instagram" href="#">
-                  <svg className={styles["social-icon"]}>
-                    <use xlinkHref={`${socialIcons}#icon-instagram`}></use>
-                  </svg>
-                </a>
-              </li>
+              {socialMediaLinks.map((link) => (
+                <li>
+                  <a aria-label={link.platform} href={link.href}>
+                    <svg className={styles["social-icon"]}>
+                      <use xlinkHref={`${socialIcons}#${link.iconId}`}></use>
+                    </svg>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           {/* footer navigation links */}
