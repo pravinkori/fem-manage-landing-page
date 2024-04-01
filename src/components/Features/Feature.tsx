@@ -1,5 +1,23 @@
 import styles from "./Feature.module.css";
 
+const featureList = [
+  {
+    title: "Track company-wide progress",
+    description:
+      "See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.",
+  },
+  {
+    title: "Advanced built-in reports",
+    description:
+      "Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.",
+  },
+  {
+    title: "Everything you need in one place",
+    description:
+      "Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.",
+  },
+];
+
 function Feature() {
   return (
     <section className={`padding-block-700`}>
@@ -18,50 +36,17 @@ function Feature() {
           <div>
             <ul role="list" className={`${styles["numbered-items"]} flow`}>
               <li>
-                <div
-                  className={`flow`}
-                  style={{ "--flow-spacer": `1em` } as React.CSSProperties}
-                >
-                  <h3 className={`ff-accent fs-600 fw-bold`}>
-                    Track company-wide progress
-                  </h3>
-                  <p data-width="wide">
-                    See how your day-to-day tasks fit into the wider vision. Go
-                    from tracking progress at the milestone level all the way
-                    done to the smallest of details. Never lose sight of the
-                    bigger picture again.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div
-                  className={`flow`}
-                  style={{ "--flow-spacer": `1em` } as React.CSSProperties}
-                >
-                  <h3 className={`ff-accent fs-600 fw-bold`}>
-                    Advanced built-in reports
-                  </h3>
-                  <p data-width="wide">
-                    Set internal delivery estimates and track progress toward
-                    company goals. Our customisable dashboard helps you build
-                    out the reports you need to keep key stakeholders informed.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div
-                  className={`flow`}
-                  style={{ "--flow-spacer": `1em` } as React.CSSProperties}
-                >
-                  <h3 className={`ff-accent fs-600 fw-bold`}>
-                    Everything you need in one place
-                  </h3>
-                  <p data-width="wide">
-                    Stop jumping from one service to another to communicate,
-                    store files, track tasks and share documents. Manage offers
-                    an all-in-one team productivity solution.
-                  </p>
-                </div>
+                {featureList.map((feature) => (
+                  <div
+                    className={`flow`}
+                    style={{ "--flow-spacer": "1em" } as React.CSSProperties}
+                  >
+                    <h3 className={`ff-accent fs-600 fw-bold`}>
+                      {feature.title}
+                    </h3>
+                    <p data-width="wide">{feature.description}</p>
+                  </div>
+                ))}
               </li>
             </ul>
           </div>
