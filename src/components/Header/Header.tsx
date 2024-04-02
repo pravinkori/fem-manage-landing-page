@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import closeIcon from "/src/assets/images/icon-close.svg";
 import hamburgerIcon from "/src/assets/images/icon-hamburger.svg";
 
-const headerNavigationList = [
+const headerNavigationLinks = [
   {
     text: "Pricing",
     href: "#",
@@ -98,7 +98,7 @@ function Header() {
               className={styles["nav-list"]}
               id="primary-navigation"
             >
-              {headerNavigationList.map((link) => (
+              {headerNavigationLinks.map((link) => (
                 <li key={link.text}>
                   <a href={link.href}>{link.text}</a>
                 </li>
