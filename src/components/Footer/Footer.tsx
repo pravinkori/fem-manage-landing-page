@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 import Button from "../Button/Button";
 import socialIcons from "/src/assets/images/social-icons.svg";
 
-const footerNavigationList = [
+const footerNavigationLinks = [
   {
     text: "Home",
     href: "#",
@@ -62,11 +62,11 @@ function Footer() {
               role="list"
               aria-label="Social links"
             >
-              {socialMediaLinks.map((link) => (
-                <li>
-                  <a aria-label={link.platform} href={link.href}>
+              {socialMediaLinks.map(({ iconId, platform, href }) => (
+                <li key={iconId}>
+                  <a aria-label={platform} href={href}>
                     <svg className={styles["social-icon"]}>
-                      <use xlinkHref={`${socialIcons}#${link.iconId}`}></use>
+                      <use xlinkHref={`${socialIcons}#${iconId}`}></use>
                     </svg>
                   </a>
                 </li>
@@ -77,7 +77,7 @@ function Footer() {
           <div>
             <nav className={styles["footer-nav"]}>
               <ul aria-label="Footer" role="list">
-                {footerNavigationList.map((link) => (
+                {footerNavigationLinks.map((link) => (
                   <li key={link.text}>
                     <a href={link.href}>{link.text}</a>
                   </li>
