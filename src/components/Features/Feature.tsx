@@ -35,8 +35,8 @@ function Feature() {
           </div>
           <div>
             <ul role="list" className={`${styles["numbered-items"]} flow`}>
-              <li>
-                {featureList.map((feature) => (
+              {featureList.map((feature) => (
+                <li key={feature.title}>
                   <div
                     className={`flow`}
                     style={{ "--flow-spacer": "1em" } as React.CSSProperties}
@@ -46,8 +46,8 @@ function Feature() {
                     </h3>
                     <p data-width="wide">{feature.description}</p>
                   </div>
-                ))}
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
