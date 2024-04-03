@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import logo from "/src/assets/images/logo.svg";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
@@ -25,41 +25,15 @@ const headerNavigationLinks = [
 ];
 
 function Header() {
-  const primaryNavRef = useRef<HTMLElement>(null);
-  const navToggleRef = useRef<HTMLButtonElement>(null);
-  const primaryHeaderRef = useRef<HTMLElement>(null);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  useEffect(() => {
-    const handleClick = () => {
-      if (primaryNavRef.current) {
-        const isDataVisible =
-          primaryNavRef.current.hasAttribute("data-visible");
-        if (navToggleRef.current) {
-          navToggleRef.current.setAttribute(
-            "aria-expanded",
-            isDataVisible ? "false" : "true"
-          );
-        }
-        primaryNavRef.current.toggleAttribute("data-visible");
-        if (primaryHeaderRef.current) {
-          primaryHeaderRef.current.toggleAttribute("data-overlay");
-        }
-      }
-    };
-
-    if (navToggleRef.current) {
-      navToggleRef.current.addEventListener("click", handleClick);
-    }
-
-    return () => {
-      if (navToggleRef.current) {
-        navToggleRef.current.removeEventListener("click", handleClick);
-      }
-    };
-  }, []);
+  const handleToggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+    console.log("isNavOpen state:", isNavOpen);
+  };
 
   return (
-    <header ref={primaryHeaderRef} className={styles["primary-header"]}>
+    <header className={styles["primary-header"]} data-overlay={isNavOpen}>
       <div className={`container`}>
         <div className={styles["nav-wrapper"]}>
           <a href="#">
@@ -68,10 +42,10 @@ function Header() {
             </svg>
           </a>
           <button
-            ref={navToggleRef}
             className={styles["mobile-nav-toggle"]}
             aria-controls="primary-navigation"
-            aria-expanded="false"
+            aria-expanded={isNavOpen}
+            onClick={handleToggleNav}
           >
             <img
               className={styles["icon-hamburger"]}
@@ -88,9 +62,11 @@ function Header() {
             <span className="visually-hidden">Menu</span>
           </button>
           <nav
-            ref={primaryNavRef}
-            className={styles["primary-navigation"]}
+            className={`${styles["primary-navigation"]} ${
+              isNavOpen ? styles["primary-navigation--open"] : ""
+            }`}
             id="primary-navigation"
+            data-visible={isNavOpen}
           >
             <ul
               aria-label="Primary"
