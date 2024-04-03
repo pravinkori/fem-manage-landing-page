@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 import Button from "../Button/Button";
 import closeIcon from "/src/assets/images/icon-close.svg";
 import hamburgerIcon from "/src/assets/images/icon-hamburger.svg";
+import VisuallyHidden from "../VisuallyHidden/VisuallyHidden";
 
 const headerNavigationLinks = [
   {
@@ -59,7 +60,7 @@ function Header() {
               alt=""
               aria-hidden="true"
             />
-            <span className="visually-hidden">Menu</span>
+            <VisuallyHidden>Menu</VisuallyHidden>
           </button>
           <nav
             className={`${styles["primary-navigation"]} ${
