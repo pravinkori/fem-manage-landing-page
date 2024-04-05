@@ -49,7 +49,7 @@ function Footer() {
     >
       <div className={`container`}>
         <div className={`${styles["primary-footer-wrapper"]}`}>
-          <div>
+          <div className={`${styles["primary-footer-logo-social"]}`}>
             <a href="#">
               <svg className="logo" width={146} height={24}>
                 <use xlinkHref={`${logo}#logo`}></use>
@@ -74,7 +74,7 @@ function Footer() {
             </ul>
           </div>
           {/* footer navigation links */}
-          <div>
+          <div className={`${styles["primary-footer-nav"]}`}>
             <nav className={styles["footer-nav"]}>
               <ul aria-label="Footer" role="list">
                 {footerNavigationLinks.map((link) => (
@@ -85,9 +85,9 @@ function Footer() {
               </ul>
             </nav>
           </div>
-          <div>
+          <div className={`${styles["primary-footer-form"]}`}>
             <form action="">
-              <input type="text" />
+              <input type="text" placeholder="updates in your inbox" />
               <Button>Go</Button>
             </form>
             <p>Copyright 2024. All Rights Reserved</p>
