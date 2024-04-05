@@ -48,7 +48,7 @@ function Footer() {
       className={`${styles["primary-footer"]} | bg-neutral-900 text-neutral-100  padding-block-800`}
     >
       <div className={`container`}>
-        <div className={`even-columns`}>
+        <div className={`${styles["primary-footer-wrapper"]}`}>
           <div>
             <a href="#">
               <svg className="logo" width={146} height={24}>
